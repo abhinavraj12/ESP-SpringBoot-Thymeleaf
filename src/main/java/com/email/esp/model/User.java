@@ -1,5 +1,6 @@
 package com.email.esp.model;
 
+
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -43,24 +44,23 @@ public class User {
 
 	@Column(name = "enabled")
 	private Boolean enabled = true;
-
+	
+	private String role;
+	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private Set<ClientList> clientList = new LinkedHashSet<>();
-
+	
+	
+	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private Set<EmployeeList> employeeList = new LinkedHashSet<>();
-
+	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private Set<TemplateMail> templateMail = new LinkedHashSet<>();
 
-	public User() {
-		super();
-	}
-
-	
 
 	public Long getUserId() {
 		return userId;
@@ -162,10 +162,23 @@ public class User {
 		this.templateMail = templateMail;
 	}
 
-
 	
+
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public User() {
+		super();
+	}
+
 	public User(Long userId, String name, String email, String password, String phone, String about, String profilePic,
-			Boolean enabled, Set<ClientList> clientList, Set<EmployeeList> employeeList,
+			Boolean enabled, String role, Set<ClientList> clientList, Set<EmployeeList> employeeList,
 			Set<TemplateMail> templateMail) {
 		super();
 		this.userId = userId;
@@ -176,18 +189,19 @@ public class User {
 		this.about = about;
 		this.profilePic = profilePic;
 		this.enabled = enabled;
+		this.role = role;
 		this.clientList = clientList;
 		this.employeeList = employeeList;
 		this.templateMail = templateMail;
 	}
 
-
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", password=" + password + ", phone="
-				+ phone + ", about=" + about + ", profilePic=" + profilePic + ", enabled=" + enabled + ", clientList="
-				+ clientList + ", employeeList=" + employeeList + ", templateMail=" + templateMail + "]";
+				+ phone + ", about=" + about + ", profilePic=" + profilePic + ", enabled=" + enabled + ", role=" + role
+				+ ", clientList=" + clientList + ", employeeList=" + employeeList + ", templateMail=" + templateMail
+				+ "]";
 	}
 
-
+	
 }

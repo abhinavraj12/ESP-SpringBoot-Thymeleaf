@@ -19,12 +19,12 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@GetMapping("/")
-	private String index() {
-		return "index";
-	}
+	 @GetMapping("/")
+	 private String home() {
+	 	return "home";
+	 }
 
-	@GetMapping("/login")
+	@GetMapping("/signin")
 	private String login() {
 		return "login";
 	}
