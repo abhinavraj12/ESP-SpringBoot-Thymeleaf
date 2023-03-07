@@ -18,7 +18,7 @@
         <div class="row row-cols-1 row-cols-md-2 g-4 container-fluid">
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/1200x400/?createAccount,email" class="card-img-top" alt="...">
+                    <img th:src="@{/images/fe1.jpg}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Feature 1</h5>
                         <p class="card-text">The website should have a user-friendly registration or sign-up process
@@ -28,7 +28,7 @@
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/1200x400/?mail,Technology" class="card-img-top" alt="...">
+                    <img th:src="@{/images/fe2.jpg}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Feature 2</h5>
                         <p class="card-text">User can send multiple email, just in single click,
@@ -39,7 +39,7 @@
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/1200x400/?support,chating" class="card-img-top" alt="...">
+                    <img th:src="@{/images/fe3.jpg}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Feature 3</h5>
                         <p class="card-text">Customer support options, such as email or chat support,
@@ -50,7 +50,7 @@
             </div>
             <div class="col">
                 <div class="card">
-                    <img src="https://source.unsplash.com/1200x400/?Computer,Engineer" class="card-img-top" alt="...">
+                    <img th:src="@{/images/fe4.jpg}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Feature 4</h5>
                         <p class="card-text">Users should be able to create and send emails, including the ability to
@@ -73,26 +73,25 @@
             </div>
             <div class="carousel-inner ">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="https://source.unsplash.com/1200x200/?Computer,Technology" class="d-block w-100 "
-                        alt="...">
+                    <img th:src="@{/images/craus2.jpg}" class="d-block w-100 " alt="...">
                     <div class="carousel-caption d-none d-md-block shadow p-3 mb-5 bg-body-tertiary rounded"
-                        style="color: rgb(27, 27, 26); background: rgb(191, 204, 216); border: chocolate;">
+                        style="color: rgb(237, 222, 251); border: chocolate; text-align-last: center;">
                         <h5>Email Service Provider</h5>
                         <p>User Friendly ESP Platform</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://source.unsplash.com/1200x200/?Technology,mail" class="d-block w-100" alt="...">
+                    <img th:src="@{/images/craus1.jpg}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block shadow p-3 mb-5 bg-body-tertiary rounded"
-                        style="color: rgb(27, 27, 26); background: rgb(191, 204, 216); border: chocolate;">
+                        style="color: rgb(15, 13, 16);  border: chocolate; text-align-last: center;">
                         <h5>Email Service Provider</h5>
                         <p>User Friendly ESP Platform</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://source.unsplash.com/1200x200/?mail,Technology" class="d-block w-100" alt="...">
+                    <img th:src="@{/images/craus3.jpg}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block shadow p-3 mb-5 bg-body-tertiary rounded"
-                        style="color: rgb(27, 27, 26); background: rgb(191, 204, 216); border: chocolate;">
+                        style="color: rgb(0, 0, 0);   border: chocolate; text-align-last: center;">
                         <h5>Email Service Provider</h5>
                         <p>User Friendly ESP Platform</p>
                     </div>
@@ -110,7 +109,62 @@
             </button>
         </div>
 
+        <!-- Contact Us Form -->
+        <div class="container py-5 h-101 shadow bg-body-tertiary rounded" style="background-color: #f8f4f0;">
+            <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+
+                    <h2 style="text-align: center;">
+                        <a>Send Us A Message</a>
+                    </h2>
+                    <img th:src="@{/images/contact.png}" class="img-fluid" alt="Phone image">
+
+
+
+                </div>
+                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                    <div class="row d-flex align-items-center justify-content-center h-100">
+                        <h3 style="text-align: center;">Contact Us</h3>
+                    </div>
+
+                    <form id="contactUs">
+                        <!-- Name -->
+                        <div class="form-outline mb-4">
+                            <input type="name" id="form1Example13" class="form-control form-control-lg" name="name" />
+                            <label class="form-label" for="form1Example13">Name</label>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form1Example23" class="form-control form-control-lg" name="email" />
+                            <label class="form-label" for="form1Example23">Email</label>
+                        </div>
+                        <!-- message -->
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                name="message"></textarea>
+                            <label for="exampleFormControlTextarea1">Message</label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-lg btn-block"
+                            style="background-color: chocolate;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <!-- Footer -->
+        <footer class="bg-light text-center text-lg-start">
+            <div class="text-center p-3" style="background-color: rgba(114, 105, 105, 0.2);">
+                © Copyright 2023 Email Service Provider - All Rights Reserved
+            </div>
+        </footer>
+
     </section>
+
+
+
 
 
 </body>

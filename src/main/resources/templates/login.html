@@ -1,21 +1,19 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<!-- th:replace="base::layout(~{::section})" -->
+
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>login</title>
 </head>
 
 <body>
-    <!-- Login -->
-    <div class="flex-md-row my-3 ml-3">
-        <h3>Email Service<a style="color: rgb(255, 157, 0);"> Provider</a></h3>
-    </div>
+    
     <section class="vh-100">
-        <div class="container py-5 h-100">
+        <div class="container py-4 h-101 shadow bg-body-tertiary rounded" style="background-color: #fffefe;">
             <div class="row d-flex align-items-center justify-content-center h-100">
 
                 <div class="col-md-8 col-lg-7 col-xl-6">
@@ -25,8 +23,8 @@
                 </div>
                 <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                     <div class="row d-flex align-items-center justify-content-center h-100">
-                        <h2>
-                            <a style="color: rgb(42, 38, 38);">Login</a>
+                        <h2 style="color: rgb(42, 38, 38); text-align: center;">
+                            <a>Login</a>
                         </h2>
                     </div>
 
@@ -44,7 +42,6 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-
 
                     <form action="/login" method="post">
                         <!-- Email input -->
@@ -86,9 +83,13 @@
             </div>
 
         </div>
-    </section>
 
-
+    <!-- Footer -->
+	<!-- <footer class="bg-light text-center text-lg-start">
+		<div class="text-center p-3" style="background-color: rgba(114, 105, 105, 0.2);">
+			© Copyright 2023 Email Service Provider - All Rights Reserved
+		</div>
+	</footer> -->
 </body>
 
 </html>

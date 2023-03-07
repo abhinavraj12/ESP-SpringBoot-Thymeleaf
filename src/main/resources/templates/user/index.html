@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="/user/base2::layout(~{::section})" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="/user/base2::layout(~{::section})">
 
 <head>
     <!-- Required meta tags -->
@@ -10,13 +10,65 @@
 </head>
 
 <body>
-<section>
-    <h1>Login Working</h1>
-
-</section>
+    <section>
+        <h1>Hello</h1>
 
 
-   
+         <!-- Contact Us Form -->
+
+         <section id="contactUs" class="vh-101">
+            <div class="container py-5 h-101 shadow bg-body-tertiary rounded" style="background-color: #f8f4f0;">
+                <div class="row d-flex align-items-center justify-content-center h-100">
+                    <div class="col-md-8 col-lg-7 col-xl-6">
+
+                        <h2 style="text-align: center;">
+                            <a>Send Us A Message</a>
+                        </h2>
+                        <img th:src="@{/images/contact.png}" class="img-fluid" alt="Phone image">
+
+
+
+                    </div>
+                    <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                        <div class="row d-flex align-items-center justify-content-center h-100">
+                            <h3 style="text-align: center;">Contact Us</h3>
+                        </div>
+
+                        <form>
+                            <!-- Name -->
+                            <div class="form-outline mb-4">
+                                <input type="name" id="form1Example13" class="form-control form-control-lg"
+                                    name="name" />
+                                <label class="form-label" for="form1Example13">Name</label>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-outline mb-4">
+                                <input type="email" id="form1Example23" class="form-control form-control-lg"
+                                    name="email" />
+                                <label class="form-label" for="form1Example23">Email</label>
+                            </div>
+                            <!-- message -->
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    name="message"></textarea>
+                                <label for="exampleFormControlTextarea1">Message</label>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-lg btn-block"
+                                style="background-color: chocolate;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </section>
+
+
+
 
 </body>
 
