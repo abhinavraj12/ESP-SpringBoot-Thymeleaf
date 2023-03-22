@@ -23,6 +23,7 @@ public class UserController {
 	 private String home() {
 	 	return "home";
 	 }
+	 
 
 	@GetMapping("/signin")
 	private String login() {

@@ -5,71 +5,82 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>login</title>
 </head>
 
 <body>
-    <section>
-        <h1>Hello</h1>
+    <section class="vh-100" style=" margin-top: 3%; background-color: rgb(16, 17, 18);">
+        <div class="card text-bg-dark vh-101">
+            <img th:src="@{/images/indexFront.jpg}" class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title" style="color: rgb(233, 124, 34); margin-left: 1cm;">Email Service Provider
+                </h5>
+                <p class="card-text" style="color: rgb(216, 235, 223); margin-left: 1cm;">ESP is the platform where
+                    you
+                    can send email to your client and employee just in
+                    single click.</p>
+                <div class="d-grid gap-2 col-6 mx-auto">
 
-
-         <!-- Contact Us Form -->
-
-         <section id="contactUs" class="vh-101">
-            <div class="container py-5 h-101 shadow bg-body-tertiary rounded" style="background-color: #f8f4f0;">
-                <div class="row d-flex align-items-center justify-content-center h-100">
-                    <div class="col-md-8 col-lg-7 col-xl-6">
-
-                        <h2 style="text-align: center;">
-                            <a>Send Us A Message</a>
-                        </h2>
-                        <img th:src="@{/images/contact.png}" class="img-fluid" alt="Phone image">
-
-
-
-                    </div>
-                    <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                        <div class="row d-flex align-items-center justify-content-center h-100">
-                            <h3 style="text-align: center;">Contact Us</h3>
-                        </div>
-
-                        <form>
-                            <!-- Name -->
-                            <div class="form-outline mb-4">
-                                <input type="name" id="form1Example13" class="form-control form-control-lg"
-                                    name="name" />
-                                <label class="form-label" for="form1Example13">Name</label>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="form-outline mb-4">
-                                <input type="email" id="form1Example23" class="form-control form-control-lg"
-                                    name="email" />
-                                <label class="form-label" for="form1Example23">Email</label>
-                            </div>
-                            <!-- message -->
-                            <div class="form-group">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                    name="message"></textarea>
-                                <label for="exampleFormControlTextarea1">Message</label>
-                            </div>
-
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary btn-lg btn-block"
-                                style="background-color: chocolate;">Send Message</button>
-                        </form>
-                    </div>
+                    <h3 style="color: rgb(196, 207, 227);">Employee List</h3>
+                    <button onclick="document.location='employee'" class="btn btn-success zoom-in"
+                        type="button">Employee</button>
+                    <h3 style="color: rgb(196, 207, 227);">Client List</h3>
+                    <button onclick="document.location='client'" class="btn btn-success zoom-in"
+                        type="button">Client</button>
+                    <h3 style="color: rgb(196, 207, 227);">Create your Template</h3>
+                    <button onclick="document.location='template'" class="btn btn-success zoom-in"
+                        type="button">Template</button>
                 </div>
-
             </div>
-        </section>
-
+        </div>
     </section>
 
+    <section style="margin-top: 10%;">
+        <!-- Contact Us Form -->
+        <div class="container py-5 h-101 shadow bg-body-tertiary rounded" style="background-color: #f8f4f0;">
+            <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                    <h2 style="text-align: center; margin-top: 10%;">
+                        <a>Send Us A Message</a>
+                    </h2>
+                    <img th:src="@{/images/contact.png}" class="img-fluid" alt="Phone image">
 
+                </div>
+                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                    <div class="row d-flex align-items-center justify-content-center h-100">
+                        <h3 style="text-align: center;">Contact Us</h3>
+                    </div>
+                    <form id="contactUs">
 
+                        <!-- Name -->
+                        <div class="form-outline mb-4">
+                            <input type="name" id="form1Example13" class="form-control form-control-lg" name="name" />
+                            <label class="form-label" for="form1Example13">Name</label>
+                        </div>
 
+                        <!-- Email -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form1Example23" class="form-control form-control-lg" name="email" />
+                            <label class="form-label" for="form1Example23">Email</label>
+                        </div>
+
+                        <!-- message -->
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                name="message"></textarea>
+                            <label for="exampleFormControlTextarea1">Message</label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-lg btn-block"
+                            style="background-color: chocolate;">Send Message.
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

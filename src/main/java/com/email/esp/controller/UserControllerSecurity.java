@@ -26,9 +26,19 @@ public class UserControllerSecurity {
 		m.addAttribute("user", user);
 	}
 	
-	@GetMapping("/")
+	@GetMapping("/index")
 	public String index() {
 		return "user/index";
 	}
-
+	
+	 @GetMapping("/myprofile")
+	 private String profile() {
+	 	return "user/myprofile";
+	 }
+//	 @GetMapping("/indexPage")
+//	 private String indexPage() {
+//	 	return "user/index";
+//	 }
+	 
+	
 }

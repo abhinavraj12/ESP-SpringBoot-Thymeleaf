@@ -10,104 +10,104 @@
 	<title>signup</title>
 </head>
 
+<body>
+	<section class="vh-110">
+		<div class="container py-5 vh-101 ">
+			<div class="row d-flex align-items-center justify-content-center vh-110">
 
-<section class="vh-110">
-	<div class="container py-5 vh-101 ">
-		<div class="row d-flex align-items-center justify-content-center vh-110">
+				<div class="col-md-8 col-lg-7 col-xl-6">
 
-			<div class="col-md-8 col-lg-7 col-xl-6">
+					<img th:src="@{/images/signup.png}" class="img-fluid" alt="Phone image" style="margin-bottom: 60%;">
+				</div>
+				<div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
 
-				<img th:src="@{/images/signup.png}" class="img-fluid" alt="Phone image" style="margin-bottom: 60%;">
-			</div>
-			<div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+					<div class="row d-flex align-items-center justify-content-center h-100">
 
-				<div class="row d-flex align-items-center justify-content-center h-100">
+						<h2 style="color: rgb(42, 38, 38); text-align: center;">
+							<a>SignUp</a>
+						</h2>
 
-					<h2 style="color: rgb(42, 38, 38); text-align: center;">
-						<a>SignUp</a>
-					</h2>
+					</div>
+
+					<!-- Alert Implementation -->
+
+					<th:block th:if="${session.message}">
+						<div class="alert alert-warning alert-dismissible fade show" role="alert">
+							<strong>
+								<a class="text-center fs-4 text-success">[[${session.message}]]</a>
+							</strong>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+
+
+						<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+					</th:block>
+
+
+
+					<!-- Registration Form -->
+					<form action="createUser" method="post">
+						<!-- name -->
+						<div class="form-outline mb-4">
+							<input type="name" id="form1Example13" class="form-control form-control-lg" name="name"
+								required /> <label class="form-label" for="form1Example13">Name</label>
+						</div>
+
+						<!-- Email input -->
+						<div class="form-outline mb-4">
+							<input type="email" id="form1Example13" class="form-control form-control-lg" name="email"
+								required /> <label class="form-label" for="form1Example13">Email address</label>
+						</div>
+
+						<!-- Password input -->
+						<div class="form-outline mb-4">
+							<input type="password" id="form1Example23" class="form-control form-control-lg"
+								name="password" required />
+							<label class="form-label" for="form1Example23">Password</label>
+						</div>
+
+						<!-- phone no -->
+
+						<div class="form-outline mb-4">
+							<input type="mobileNo" id="form1Example13" class="form-control form-control-lg" name="phone"
+								required /> <label class="form-label" for="form1Example13">Mobile No</label>
+						</div>
+
+						<!-- about -->
+						<div class="form-group">
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+								name="about"></textarea>
+							<label for="exampleFormControlTextarea1">About</label>
+						</div>
+
+						<!-- Profile Pic -->
+
+						<div class="form-group" style="margin-bottom: 10%;">
+							<input class="form-control" id="image" type="file" name="profilePic" placeholder="Photo"
+								required="" capture>
+							<label class="header">Profile Photo</label>
+						</div>
+
+						<!-- Submit button -->
+						<button style="margin-bottom: 20%;" type="submit"
+							class="btn btn-primary btn-lg btn-block">Register</button>
+
+					</form>
 
 				</div>
-
-				<!-- Alert Implementation -->
-
-				<th:block th:if="${session.message}">
-					<div class="alert alert-warning alert-dismissible fade show" role="alert">
-						<strong>
-							<a class="text-center fs-4 text-success">[[${session.message}]]</a>
-						</strong>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-
-
-					<th:block th:text="${#session.removeAttribute('message')}"></th:block>
-				</th:block>
-
-
-
-				<!-- Registration Form -->
-				<form action="createUser" method="post">
-					<!-- name -->
-					<div class="form-outline mb-4">
-						<input type="name" id="form1Example13" class="form-control form-control-lg" name="name"
-							required /> <label class="form-label" for="form1Example13">Name</label>
-					</div>
-
-					<!-- Email input -->
-					<div class="form-outline mb-4">
-						<input type="email" id="form1Example13" class="form-control form-control-lg" name="email"
-							required /> <label class="form-label" for="form1Example13">Email address</label>
-					</div>
-
-					<!-- Password input -->
-					<div class="form-outline mb-4">
-						<input type="password" id="form1Example23" class="form-control form-control-lg" name="password"
-							required />
-						<label class="form-label" for="form1Example23">Password</label>
-					</div>
-
-					<!-- phone no -->
-
-					<div class="form-outline mb-4">
-						<input type="mobileNo" id="form1Example13" class="form-control form-control-lg" name="phone"
-							required /> <label class="form-label" for="form1Example13">Mobile No</label>
-					</div>
-
-					<!-- about -->
-					<div class="form-group">
-						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-							name="about"></textarea>
-						<label for="exampleFormControlTextarea1">About</label>
-					</div>
-
-					<!-- Profile Pic -->
-
-					<div class="form-group" style="margin-bottom: 10%;">
-						<input class="form-control" id="image" type="file" name="profilePic" placeholder="Photo"
-							required="" capture>
-						<label class="header">Profile Photo</label>
-					</div>
-
-					<!-- Submit button -->
-					<button style="margin-bottom: 20%;" type="submit"
-						class="btn btn-primary btn-lg btn-block">Register</button>
-
-				</form>
-
 			</div>
 		</div>
-	</div>
 
-	<!-- Footer -->
-	<!-- <footer class="bg-light text-center text-lg-start">
+		<!-- Footer -->
+		<!-- <footer class="bg-light text-center text-lg-start">
 		<div class="text-center p-3" style="background-color: rgba(114, 105, 105, 0.2);">
 			© Copyright 2023 Email Service Provider - All Rights Reserved
 		</div>
 	</footer> -->
 
-</section>
+	</section>
 
 
 </body>
